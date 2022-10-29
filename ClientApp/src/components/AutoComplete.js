@@ -66,7 +66,7 @@ const AutoComplete = () => {
     };
 
     return (
-        <div ref={wrapperRef} className="flex-container flex-column pos-rel">
+        <div ref={wrapperRef}>
             <TextField variant="outlined" onBlur={() => setDisplay(false)} onClick={() => setDisplay(!display)} placeholder="Type to search"
                 value={search} onChange={event => {
                     setDisplay(true)
