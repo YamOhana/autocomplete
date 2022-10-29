@@ -15,7 +15,7 @@ const AutoComplete = () => {
 
     useEffect(() => {
         const employee = [];
-        const promises = new Array(10).fill().map(() => fetch(`${URL}`));
+        const promises = new Array(8).fill().map(() => fetch(`${URL}`));
         Promise.all(promises).then(employeeArr => {
             return employeeArr.map((value, index) =>
                 value.json().then((worker) => {
@@ -74,13 +74,13 @@ const AutoComplete = () => {
                 }}
                 sx={{ marginTop: 10, marginLeft: '50%', backgroundColor: "white" }} />
             {display && (
-                <div className="autoContainer">
+                <Box className="autoContainer" sx={{maxHeight: 400, maxWidth:200 ,overflow: 'auto', marginLeft: '600px'}}>
                     {options
                         .filter((worker) => worker.Name.toLowerCase().indexOf(search.toLowerCase()) > -1 || worker.WorkTitle.toLowerCase().indexOf(search.toLowerCase()) > -1)
                         .map((value, i) => {
                             return (
-                                <Box sx={{ maxWidth: 200, maxHeight: 100, marginLeft: '50%' }}>
-                                    <Card key={i} tabIndex="0" onClick={() => setDisplay(false)}>
+                                <Box key={i} sx={{ maxWidth: 200, maxHeight: 100}}>
+                                    <Card tabIndex="0" onClick={() => setDisplay(false)}>
                                         <CardContent>
                                             <Avatar src={value.ImageUrl} />
                                             <Typography sx={{ fontSize: 14 }} variant="h5" component="div" >
@@ -94,7 +94,7 @@ const AutoComplete = () => {
                                 </Box>
                             );
                         })}
-                </div>
+                </Box>
             )}
         </div>
     )

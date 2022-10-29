@@ -9,8 +9,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <Container disableGutters maxWidth={true}>
+      <Container disableGutters >
         <Typography sx={{ marginLeft: "40%", marginTop: 20, color: "pink" }} variant="h3">Looking For an Employee?</Typography>
+        <Typography sx={{ marginLeft: "44%", color: "pink" }} variant="h6">Click on the search bar to see who's working where</Typography>
         <AutoComplete />
       </Container>
     );
