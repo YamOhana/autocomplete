@@ -1,4 +1,3 @@
-
 namespace autocomplete.Models
 {
     public class EmployeeBuilder

@@ -72,7 +72,7 @@ const AutoComplete = () => {
                     setDisplay(true)
                     setSearch(event.target.value)
                 }}
-                sx={{ marginTop: 10, marginLeft: '50%', backgroundColor: "white"}}/>
+                sx={{ marginTop: 10, marginLeft: '50%', backgroundColor: "white" }} />
             {display && (
                 <div className="autoContainer">
                     {options

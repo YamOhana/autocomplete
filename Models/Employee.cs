@@ -1,5 +1,3 @@
-
-
 namespace autocomplete.Models
 {
     public class Employee
